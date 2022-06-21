@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 498355235669367402}
   - component: {fileID: 498355235669367400}
   - component: {fileID: 498355235669367403}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GateCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}

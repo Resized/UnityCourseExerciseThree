@@ -15,7 +15,7 @@ public class DoorScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Enemy")
         {
             anim.SetBool("Open", true);
         }
@@ -23,7 +23,7 @@ public class DoorScript : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "Enemy")
         {
             anim.SetBool("Open", false);
         }

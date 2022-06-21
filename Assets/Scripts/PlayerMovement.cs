@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12f;
 
     public Vector3 velocity;
+    public GameObject enemy;
 
     // Start is called before the first frame update
     private void Start()
@@ -26,7 +27,16 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += Physics.gravity.y * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-        
-        
+
+        // if pressing q change enemy animation state
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            enemy.GetComponent<Animator>().SetInteger("State", 1);
+        }
+        else if (Input.GetKeyUp(KeyCode.Q))
+        {
+            enemy.GetComponent<Animator>().SetInteger("State", 0);
+        }
+
     }
 }
